@@ -1,6 +1,5 @@
 myenv
 .vscode
-manage.py
 *.pyc
 *~
 /.vscode
