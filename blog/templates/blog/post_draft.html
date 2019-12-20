@@ -1,0 +1,22 @@
+{%extends 'blog/base.html'%}
+
+{%block title%} - Draft| {{post.title}}{%endblock%}
+
+{%block content%}
+<div class="container">
+    <h2>Draft Post</h2>
+
+    <ul>
+        {%for post in draft_posts%}
+
+        <li><a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a></li>
+        <p>created on : {{post.created_date}}</p>
+        {%empty%}
+        <p>Nothing ...</p>
+
+        {%endfor%}
+    </ul>
+
+
+</div>
+{%endblock%}

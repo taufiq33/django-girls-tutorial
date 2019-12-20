@@ -1,0 +1,15 @@
+{%extends 'blog/base.html'%}
+
+{%block title%} - Add post{%endblock%}
+
+{%block content%}
+<div class="container">
+    <h2>New Post</h2>
+    <form action="{% url 'post_add' %}" method="POST"> {% csrf_token %}
+
+        {{form.as_p}}
+        <button class="btn btn-submit" type="submit">Save</button>
+
+    </form>
+</div>
+{%endblock%}
